@@ -4,9 +4,8 @@ title: "Cloudflare Dynamic DNS"
 description: "Use Cloudflare as a Dynamic DNS with a bash simple script"
 date: 2016-10-21
 comments: true
+share: false
 ---
-
-# Use Cloudflare as a Dynamic DNS with a simple script
 
 Let's say you're experimenting with a [Raspberry Pi](https://www.raspberrypi.org) or have an old computer and you want to host a website at home instead of buying a subscription to a VPS. You go ahead, craft your best CSS, link a cool domain name to your IP, forward the ports, start Apache or nginx or whatever and there you go: home-made web server, nice!
 
@@ -55,7 +54,6 @@ You can use it by just appending ` | jq .` at the end of the previous command.
 We're going to look for the part concerning the record we want to update. Once formatted, the result will contain something like
 
 ```json
-},
 {
   "rec_id": "780606188",
   "rec_hash": "8ada191ed06f989cc3dac9a7806061c8",
