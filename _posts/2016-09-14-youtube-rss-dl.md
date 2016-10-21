@@ -7,6 +7,8 @@ comments: true
 share: false
 ---
 
+This is the project pipeline of a ruby script to automatically check and download new videos from chosen Youtube channels.
+
 ### Environment
 
 * Ubuntu 16.04

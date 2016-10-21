@@ -133,10 +133,12 @@ body {
       text-decoration: none;
 			border-radius: 3px;
     }
+    ul {
+      list-style-type: square;
+    }
     li {
       font-size: .75rem;
       display: inline;
-      list-style-type: square;
       text-transform: lowercase;
     }
     span {

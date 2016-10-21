@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Cloudflare Dynamic DNS"
-description: "use Cloudflare as a Dynamic DNS with a bash simple script"
+title: "Cloudflare dynamic DNS"
+description: "use Cloudflare as a dynamic DNS with a bash simple script"
 date: 2016-10-21
 comments: true
 share: false
@@ -19,14 +19,14 @@ Now there are three solutions to this problem:
 
 For the rest of this post I'm going to assume you choose the third option.
 
-There are a lot of services called **Dynamic DNS** that can do this for you: they basically use an application or a script that hooks up your IP address to a DNS name like `tomraspberry.cooldynamicdns.com` so that you can setup a CNAME to it in your domain since the endpoint will never change, and then it regularly checks if your IP has changed and, if it has, updates the record.
+There are a lot of services called **dynamic DNS** that can do this for you: they basically use an application or a script that hooks up your IP address to a DNS name like `tomraspberry.cooldynamicdns.com` so that you can setup a CNAME to it in your domain since the endpoint will never change, and then it regularly checks if your IP has changed and, if it has, updates the record.
 
 These services are great, but have a few problems: first of all, they are not free, and if they are you are introducing an extra element in the chain that goes from your router to the DNS of your domain.
 They're definitely good enough if you just want to setup everything rapidly, or if you're not technical and don't know what to do. But, honestly, you setup nginx on a Raspberry Pi, you can write 10 lines of a shell script. So, stop whining and let's get dirty!
 
 Many have decided to delegate the DNS handling of their domains to [**Cloudflare**](https://www.cloudflare.com) because it has some undeniable advantages: it's free (but has pro plans if you want more features), has DDoS protection, analytics, caching, minify, even some sort of free SSL.
 
-But you may not know that you can also use Cloudflare as a Dynamic DNS service with a simple **cron script**, since their API is quite capable. And that's what we're going to do: let the web server speak directly with Cloudflare via the RESTful API, which means a simple `curl` with the updated IP address of the router.
+But you may not know that you can also use Cloudflare as a dynamic DNS service with a simple **cron script**, since their API is quite capable. And that's what we're going to do: let the web server speak directly with Cloudflare via the RESTful API, which means a simple `curl` with the updated IP address of the router.
 
 The first thing to do is to get your **API key** to speak with the Cloudflare infrastructure. You can find it at the bottom of [your account information](https://www.cloudflare.com/a/account/my-account). *Keep it secret, keep it safe.*
 Next, you'll need to know the ID of your domain and DNS records, an alphanumeric string which Cloudflare uses to internally identify your asset.
