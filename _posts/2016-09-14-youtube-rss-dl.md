@@ -161,7 +161,7 @@ First of all, we repeat the process for every channel, which in the script are t
 CHANNELS.each do |channel_name, channel_id|
 ```
 
-If we just added a channel, or if it's the first time we call the script, the channel name will not be present in the database. We declare it now then as an hash key with an empty array as value to which we will add, one by one, the downloaded videos id.
+If we just added a channel, or if it's the first time we call the script, the channel name will not be present in the database. We declare it now then as an hash key with an empty array as value to which we will add, one by one, the downloaded videos id. The `||=` symbol will declare an empty array only if the variable doesn't have already a value.
 
 ```ruby
   database[channel_name] ||= []
