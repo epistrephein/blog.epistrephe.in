@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cloudflare Dynamic DNS"
-description: "Use Cloudflare as a Dynamic DNS with a bash simple script"
+description: "use Cloudflare as a Dynamic DNS with a bash simple script"
 date: 2016-10-21
 comments: true
 share: false

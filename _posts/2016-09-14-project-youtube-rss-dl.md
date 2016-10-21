@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Project: youtube-rss-dl"
-description: "A ruby script to automatically check and download new videos from chosen YouTube channels"
+title: "youtube-rss-dl"
+description: "a ruby script to automatically check and download new videos from chosen YouTube channels"
 date: 2016-09-14
 comments: true
 share: false
 ---
 
-## Environment
+### Environment
 
 * Ubuntu 16.04
 * ruby 2.3.1
@@ -17,7 +17,7 @@ share: false
 * [simple-rss](https://github.com/cardmagic/simple-rss) 1.3.1
 * [youtube-dl.rb](https://github.com/layer8x/youtube-dl.rb) 0.3.1.2016.08.31
 
-## Tools
+### Tools
 
 With a fresh Ubuntu 16.04 system, I choose to install the apt version of `ruby` and `pip`.
 
@@ -48,13 +48,13 @@ The two gems then:
 sudo gem install simple-rss youtube-dl.rb
 ```
 
-## Process
+### Process
 
 The whole script is a the end of the page.
 
 Here I will break it in pieces to better understand the process, in case you want to add or change something.
 
-### Shebang
+#### Shebang
 
 The script will be called regularly by cron, therefore we need to tell the shell this is a ruby script.
 
@@ -64,7 +64,7 @@ Use the `env` convention to make it portable and not guess where the ruby bin is
 #!/usr/bin/env ruby
 ```
 
-### Require statements
+#### Require statements
 
 ```ruby
 require 'json'
@@ -75,7 +75,7 @@ require 'youtube-dl.rb'
 
 In addition to the two gems (`open-uri` is used with `simple-rss` to open the feed url), we'll need to manipulate a json to keep track of the downloaded videos.
 
-### YouTube channels
+#### YouTube channels
 Here's the most customizable part: the YouTube channels you want to follow.
 
 For each one of them, you need to get the `channel-external-id` tag in the source of the channel page. For example the [**Vsauce**](https://www.youtube.com/user/Vsauce) id is `UC6nSFpj9HTCZ5t-N3Rm3-HA`.
@@ -95,14 +95,14 @@ We can also declare a costant that will store the base url for the feed.
 RSS_BASE_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id='
 ```
 
-### Destination folder
+#### Destination folder
 Another constant is the folder where the videos will be downloaded. I choose to keep them in the same folder where the script will be, and to avoid any trouble I stored it as an absolute path.
 
 ```ruby
 DESTINATION = File.expand_path(File.dirname(__FILE__))
 ```
 
-### youtube-dl options
+#### youtube-dl options
 
 Another constant, and another customizable part. These are the options that will be passed to youtube-dl.
 
@@ -127,7 +127,7 @@ I choose to add the uploader name and the upload date to have the videos properl
 
 The list of options is available [here](https://github.com/rg3/youtube-dl/blob/master/README.md#options). Keep in mind you'll need to rubify them, usually replacing `-` with `_` and converting single flags in hash elements with `true` or `false`.
 
-### JSON database
+#### JSON database
 
 Along with the script, we'll keep a json file to keep track of the downloaded file, so to avoid downloading the same video over and over.
 
@@ -149,7 +149,7 @@ Then, empty or not, we load the json to a variable.
 database = JSON.parse(File.read(json))
 ```
 
-### The main loop
+#### The main loop
 
 Here's the core of the script. Keep in mind that, even if divided in pieces, this is a unique `each` method, so keep an eye for indentation and confront it with the uncommented script at the end.
 
@@ -206,7 +206,7 @@ Wrap things up and print some infos. Done!
 end
 ```
 
-### Cron
+#### Cron
 
 The final step is to setup a cron call to the script so the process happens automatically.
 
@@ -221,9 +221,9 @@ $ crontab -e
 0 23 * * * "/path/to/script/youtube-rss-dl.rb"
 ```
 
-## Script
+### Script
 
-Here's the whole script with comments ([download](https://github.com/epistrephein/misc-scripts/blob/master/youtube-rss-dl/youtube-rss-dl.rb).
+Here's the whole script with comments ([github](https://github.com/epistrephein/misc-scripts/blob/master/youtube-rss-dl/youtube-rss-dl.rb)).
 
 ```ruby
 #!/usr/bin/env ruby
