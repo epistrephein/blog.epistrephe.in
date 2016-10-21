@@ -36,10 +36,10 @@ kramdown:
 nav:
   - name:           "Archive"
     url:            "/archive"
-  - name:           "About"
-    url:            "/about"
   - name:           "Github"
     url:            "https://github.com/epistrephein"
+  - name:           "Email"
+    url:            "mailto:epistrephein@gmail.com"
 
 
 
