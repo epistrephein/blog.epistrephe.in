@@ -21,6 +21,10 @@ body {
   padding: 0;
 }
 
+ul {
+  list-style-type: square;
+}
+
 .content-container {
   max-width: 38rem;
   padding: 2rem 1.5rem;
@@ -133,12 +137,10 @@ body {
       text-decoration: none;
 			border-radius: 3px;
     }
-    ul {
-      list-style-type: square;
-    }
     li {
       font-size: .75rem;
       display: inline;
+      list-style-type: none;
       text-transform: lowercase;
     }
     span {
@@ -233,7 +235,7 @@ body {
   &-index {
     font-size: .75rem;
     display: inline;
-    list-style-type: square;
+    list-style-type: none;
     text-transform: lowercase;
 
 
