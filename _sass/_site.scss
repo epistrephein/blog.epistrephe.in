@@ -157,7 +157,6 @@ body {
   &-post {
     padding: 4% 2%;
     &:hover {
-    background-color: $background-over-color;
     border-color: transparent;
     border-radius: 10px;
     }
@@ -271,7 +270,6 @@ body {
 			&:hover {
 				color: $base-color;
 				text-decoration: none;
-				background-color: $background-over-color;
 		    border-color: transparent;
       }
 		}
@@ -291,7 +289,6 @@ body {
         &:hover {
   				color: $base-color;
   				text-decoration: none;
-  				background-color: $background-over-color;
   		    border-color: transparent;
         }
 
