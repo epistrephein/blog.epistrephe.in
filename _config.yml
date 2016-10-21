@@ -11,12 +11,11 @@ google-analytics:
   id:               ""
 
 # Disqus
-disqus:
-  id:               "your-id"
+# disqus:
+#   id:               "your-id"
 
 # URL
-#url:                "https://AWEEKJ.github.io" # the base hostname & protocol for your site
-url:                "http://localhost:4000" # use this url when develop
+url:                "http://epistrephe.in"
 baseurl:            "" # the subpath of your site, e.g. /blog
 
 
@@ -35,12 +34,10 @@ kramdown:
 
 # Navigation
 nav:
-  - name:           "About"
-    url:            "/about"
   - name:           "Archive"
     url:            "/archive"
-  - name:           "Tags"
-    url:            "/tags"
+  - name:           "About"
+    url:            "/about"
   - name:           "Github"
     url:            "https://github.com/epistrephein"
 
