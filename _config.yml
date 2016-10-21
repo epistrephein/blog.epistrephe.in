@@ -8,7 +8,7 @@ author:
 
 # Google-analytics
 google-analytics:
-  id:               ""
+  id:               "UA-61290809-3"
 
 # Disqus
 disqus:
@@ -18,7 +18,7 @@ disqus:
 url:                "http://epistrephe.in"
 baseurl:            "" # the subpath of your site, e.g. /blog
 
-
+# Timezone
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Europe/Rome
 permalink:          /:year-:month-:day/:title/
@@ -40,8 +40,6 @@ nav:
     url:            "https://github.com/epistrephein"
   - name:           "Email"
     url:            "mailto:epistrephein@gmail.com"
-
-
 
 # Sass
 sass:
