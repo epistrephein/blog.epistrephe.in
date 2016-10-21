@@ -225,7 +225,7 @@ $ crontab -e
 
 ### Script
 
-Here's the whole script with comments ([mantained version on github](https://github.com/epistrephein/misc-scripts/blob/master/youtube-rss-dl/youtube-rss-dl.rb)).
+Here's the whole script with comments ([and here the maintained version](https://github.com/epistrephein/misc-scripts/blob/master/youtube-rss-dl/youtube-rss-dl.rb)).
 
 ```ruby
 #!/usr/bin/env ruby
