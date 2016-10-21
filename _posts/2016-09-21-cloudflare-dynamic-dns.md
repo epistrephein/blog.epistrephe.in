@@ -2,7 +2,7 @@
 layout: post
 title: "Cloudflare dynamic DNS"
 description: "use Cloudflare as a dynamic DNS with a bash simple script"
-date: 2016-10-21
+date: 2016-09-21
 comments: true
 share: false
 ---
