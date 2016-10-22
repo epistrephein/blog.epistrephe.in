@@ -36,6 +36,8 @@ kramdown:
 nav:
   - name:           "Archive"
     url:            "/archive"
+  - name:           "rss"
+    url:            "/feed.xml"
   - name:           "Github"
     url:            "https://github.com/epistrephein"
   - name:           "Email"
