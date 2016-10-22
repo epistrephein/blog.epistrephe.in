@@ -9,7 +9,7 @@ share: false
 
 I used to play to World of Warcraft several years ago and I quit a few weeks before the release of The Burning Crusade. I came back a few times, to try out the new expansions, but nothing really was the same anymore after the death of the official Vanilla.
 
-There are a lot a private server focused on Vanilla only, the most famous of which was the, now closed, Nostalrius. I tried some other servers, just for the sake of the memories, but I believe that the time to leave Azeroth forever is now come, and that it was good while it lasted.
+There are a lot a private server focused on Vanilla only, the most famous of which was the now closed Nostalrius. I tried some other servers, just for the sake of the memories, but I believe that the time to leave Azeroth forever is now come, and that it was good while it lasted.
 
 However, just for the fun of it, I wanted to try the thrill of being in control of a server and being able to spawn, kill and cast whatever I wanted. So I dove in the WoW private server subculture and began to read about the various methods to do it.
 Here's the result of that quest: a nice, kinda-easy, a little convoluted way to compile the [Continued MaNGOS](http://cmangos.net) core for **WoW Vanilla** on an **Ubuntu VPS**.
@@ -55,7 +55,7 @@ sed -i -e '/^#PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh
 service ssh restart
 ```
 
-install and enable `ufw`, allowing HTTP, HTTPS and SSH
+install and enable `ufw` (allowing HTTP, HTTPS and SSH)
 
 ```bash
 ALLOWEDPORTS=( 80 443 $SSHPORT )
@@ -111,7 +111,7 @@ At this point, I was soon gonna need all the **graphical assets** from World of 
 
 Keep in mind that for the MaNGOS core to work, you're gonna need specifically the `1.12.1` version. You can probably find it if you look around...
 
-My user here (and after also) is `mangos`, so if you're following make sure to use your user name.
+My user here (and after) is `mangos`, so if you're following make sure to use your user name.
 
 ```bash
 cd ~/build
@@ -196,6 +196,7 @@ First of all, I opened the default server ports on UFW
 ```bash
 sudo ufw allow 3724/tcp
 sudo ufw allow 8085/tcp
+echo y | sudo ufw enable
 ```
 
 then used a MySQL query to specify the real IP of the realm, that I got with a quick `dig` query to opendns.
@@ -247,7 +248,7 @@ account set gmlevel myusername 3
 Back in my workstation, I needed to change the `realmlist.wtf` file inside the WoW folder to the IP of my VPS.
 Everything went smooth, and I was actually able to login, create a new character and enter Azeroth.
 
-Since I had GM power, I immediately issued a few commands to get to level 60, learn all my spell and explore the whole map.
+Since I had GM power, I immediately issued a few commands to get to level 60, learn all my spells and explore the whole map.
 
 ```
 .levelup 59
