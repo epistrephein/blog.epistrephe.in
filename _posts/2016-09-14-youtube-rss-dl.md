@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "youtube-rss-dl"
-description: "a ruby script to automatically check and download new videos from chosen YouTube channels"
+description: "a ruby script to automatically download new videos from chosen YouTube channels"
 date: 2016-09-14
 comments: true
 share: false
