@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A WoW Vanilla server with MaNGOS"
-description: "compile the World of Warcraft Vanilla server core on Linux"
+description: "compile and install the World of Warcraft Vanilla server core on Linux"
 date: 2016-10-08
 comments: true
 share: false
@@ -145,7 +145,7 @@ cp ~/build/contrib/vmap_assembler/vmap_assembler .
 cp ~/build/contrib/mmap/MoveMapGen .
 cp ~/mangos/contrib/extractor_binary/MoveMapGen.sh .
 cp ~/mangos/contrib/extractor_binary/offmesh.txt .
-chmod +x /home/mangos/wowdata/MoveMapGen.sh
+chmod +x ~/wowdata/MoveMapGen.sh
 ```
 
 MaNGOS needs **4 folders** to be present in the `run/bin` directory: `dbc`, `maps`, `vmaps`, `mmaps`. The last two are not mandatory, but since I was doing this, I wanted to get to the bottom of it.
@@ -189,7 +189,7 @@ cd ~/classicdb
 ./InstallFullDB.sh
 ```
 
-Since the realm is not on `localhost`, if I try to connect with these settings I'll be stuck in a **real loop** systematically trying to reach `127.0.0.1`. So I needed a few changes.
+Since the realm is not on `localhost`, if I try to connect with these settings I'll be stuck in a **realm loop** systematically trying to reach `127.0.0.1`. So I needed a few changes.
 
 First of all, I opened the default server ports on UFW
 
@@ -212,7 +212,7 @@ update `realmd`.`realmlist` set `address` = 'MYREMOTEIP' where `id` = '1';
 I can also rename the realm
 
 ```sql
-update `realmd`.`realmlist` set `name` = 'My Cool Real Name' where `id` = '1';
+update `realmd`.`realmlist` set `name` = 'My Cool Realm Name' where `id` = '1';
 ```
 
 before restarting `mysql`
