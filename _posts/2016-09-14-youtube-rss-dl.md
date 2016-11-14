@@ -34,7 +34,7 @@ $ sudo apt-get install libffi-dev libattr1-dev atomicparsley
 $ sudo pip install youtube-dl pyxattr
 ```
 
-From Ubuntu 15, `ffmpeg` is back in the system packages. This tool will be necessary to convert the videos in the proper format.
+Since Ubuntu 15, `ffmpeg` is back in the system packages. This tool will be necessary to convert the videos in the proper format.
 
 ```
 $ sudo apt-get install ffmpeg
@@ -91,7 +91,7 @@ CHANNELS = {
 }
 ```
 
-We can also declare a costant that will store the base url for the feed.
+We can also declare a constant that will store the base url for the feed.
 
 ```ruby
 RSS_BASE_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id='
