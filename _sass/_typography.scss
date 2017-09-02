@@ -4,6 +4,11 @@
   Body
   -------------- */
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   color: $base-color;
   background-color: $background-color;
@@ -18,9 +23,13 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
+  -webkit-transition: all .2s ease;
+     -moz-transition: all .2s ease;
+          transition: all .2s ease;
 
   &:hover,
   &:focus {
+    // color: $link-hover-color;
     text-decoration: underline;
   }
 }
@@ -32,10 +41,10 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: .8rem;
   font-weight: 600;
   line-height: 1.1;
-  color: #333;
+  color: $text-color;
   letter-spacing: -.025rem;
 }
 
@@ -65,12 +74,15 @@ h6 {
 }
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.3rem;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
 }
 
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 dt {
@@ -132,7 +144,7 @@ ul + h3,
 ol + h1,
 ol + h2,
 ol + h3 {
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
 hr {
@@ -143,7 +155,7 @@ hr {
 }
 
 strong {
-  color: #333;
+  color: $text-color;
   font-weight: 600;
 }
 
@@ -187,9 +199,9 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: .5rem;
-  font-size: .8rem;
-  line-height: 1.4;
+  padding: .85rem;
+  font-size: .75rem;
+  line-height: 1.7;
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
@@ -213,6 +225,12 @@ pre code {
 
 .highlight pre {
   margin-bottom: 0;
+}
+
+.highlighter-rouge + h1,
+.highlighter-rouge + h2,
+.highlighter-rouge + h3 {
+  margin-top: 3rem;
 }
 
 .gist .gist-file {
