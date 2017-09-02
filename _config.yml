@@ -16,7 +16,7 @@ disqus:
   id:               "epistrephein"
 
 # URL
-url:                "http://epistrephe.in"
+url:                "https://blog.epistrephe.in"
 baseurl:            "" # the subpath of your site, e.g. /blog
 
 # Timezone
