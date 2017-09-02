@@ -7,7 +7,7 @@
 html {
   font-family: $base-font;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 
   @media (min-width: 38em) {
@@ -40,9 +40,10 @@ body {
   padding: 2%;
 
   &-title {
-    font-weight: 300;
+    font-weight: 400;
     a {
       color: $base-color;
+      text-decoration: none;
 
       &:hover,
       &:focus {
@@ -59,8 +60,9 @@ body {
   &-nav {
     a {
       color: lighten($base-color, 50);
-      font-weight: 300;
+      font-weight: 400;
       text-transform: lowercase;
+      text-decoration: none;
       -webkit-transition: all .2s ease;
          -moz-transition: all .2s ease;
               transition: all .2s ease;
@@ -87,6 +89,7 @@ body {
 
 	a {
 		color: $base-color;
+    text-decoration: none;
 
 		&:hover,
 		&:focus {
@@ -163,9 +166,11 @@ body {
 
     a {
       color: $base-color;
+      text-decoration: none;
 
       &:hover,
       &:focus {
+        // color: $base-lighten-color;
         text-decoration: none;
       }
     }
@@ -186,8 +191,8 @@ body {
     &-desc {
 			color: lighten($base-color, 20);
       margin-bottom: .25rem;
-      font-size: 1rem;
-      line-height: 1.1rem;
+      font-size: .9rem;
+      line-height: 1.3rem;
     }
   }
 
@@ -201,6 +206,7 @@ body {
       padding-left: 2%;
       a {
         color: $base-lighten-color;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -215,6 +221,7 @@ body {
       padding-right: 2%;
       a {
         color: $base-lighten-color;
+        text-decoration: none;
 
         &:hover {
           color: $base-color;
@@ -268,6 +275,7 @@ body {
 		padding-left: .75rem;
 		a {
 			color: $base-color;
+      text-decoration: none;
 
 			&:hover {
 				color: $base-color;
@@ -287,6 +295,7 @@ body {
 
       a {
         color: $base-color;
+        text-decoration: none;
 
         &:hover {
   				color: $base-color;
