@@ -64,8 +64,10 @@ defaults:
     values:
       layout:       "post"
 
-gems:
-  - jekyll-seo-tag
+plugins:
+  - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:            [vendor]
