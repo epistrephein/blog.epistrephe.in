@@ -349,3 +349,15 @@ body {
   text-align: center;
   margin: 3rem;
 }
+
+
+/*--------------
+  Tweaks
+  -------------- */
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
