@@ -16,7 +16,7 @@ permalink: /tags/
   {% for item in (0..site.tags.size) %}
   {% unless forloop.last %}
     {% capture this_tag %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  	<li class="tag-index">
+    <li class="tag-index">
       <a href="#{{ this_tag }}">
         <span>{{ this_tag }}</span>
         <span class="count">{{ site.tags[this_tag].size }}</span>
@@ -28,12 +28,12 @@ permalink: /tags/
 
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_tag %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-	<article>
+  <article>
 
-	<div class="tag-title" id="{{ this_tag }}">
+  <div class="tag-title" id="{{ this_tag }}">
     {{ this_tag }}
   </div>
-		<ul>
+    <ul>
     {% for post in site.tags[this_tag] %}
     {% if post.title != null %}
       <li class="tag-post">
@@ -41,13 +41,13 @@ permalink: /tags/
         <a href="{{ post.link }}">
         {% else %}
         <a href="{{ post.url | prepend: site.baseurl }}">
-        {% endif %}  
+        {% endif %}
           <span class="tag-post-title">{{ post.title }}</span>
         </a>
       </li>
     {% endif %}
     {% endfor %}
-		</ul>
-	</article>
+    </ul>
+  </article>
 {% endunless %}
 {% endfor %}
