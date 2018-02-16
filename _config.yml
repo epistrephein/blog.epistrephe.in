@@ -1,4 +1,4 @@
-# Basic
+# Basic info
 name:               "epistrephein"
 description:        "epistrephein personal blog"
 
@@ -7,7 +7,10 @@ author:
   github:           epistrephein
   email:            epistrephein@gmail.com
 
-# Google-analytics
+# URL
+url:                "https://blog.epistrephe.in"
+
+# Google Analytics
 google-analytics:
   id:               "UA-61290809-3"
 
@@ -15,12 +18,7 @@ google-analytics:
 disqus:
   id:               "epistrephein"
 
-# URL
-url:                "https://blog.epistrephe.in"
-baseurl:            "" # the subpath of your site, e.g. /blog
-
 # Timezone
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Europe/Rome
 permalink:          /:year-:month-:day/:title/
 
@@ -37,9 +35,9 @@ kramdown:
 nav:
   - name:           "Archive"
     url:            "/archive"
-  - name:           "rss"
+  - name:           "RSS"
     url:            "/feed.xml"
-  - name:           "Github"
+  - name:           "GitHub"
     url:            "https://github.com/epistrephein"
   - name:           "Email"
     url:            "mailto:epistrephein@gmail.com"
@@ -51,19 +49,18 @@ sass:
 
 # Scopes
 defaults:
-  -
-    scope:
+  - scope:
       path:         ""
       type:         "pages"
     values:
       layout:       "page"
-  -
-    scope:
+  - scope:
       path:         ""
       type:         "posts"
     values:
       layout:       "post"
 
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-paginate
