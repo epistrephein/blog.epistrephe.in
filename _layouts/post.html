@@ -3,7 +3,7 @@ layout: default
 ---
 <header>
   <h1 class="header-small">
-    <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
+    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
   </h1>
 </header>
 <div class="post">
@@ -27,9 +27,8 @@ layout: default
   {{ content }}
 
   <!-- Disqus -->
-  {% if page.comments != false and site.disqus.id %}
+  {% if page.comments and site.disqus.id %}
   <section id="disqus_thread"></section>
   {% include disqus.html %}
   {% endif %}
-
 </div>
