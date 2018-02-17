@@ -63,15 +63,14 @@ task :draft do
 
   puts "Creating new drafts: #{filename}"
   open(filename, 'w') do |draft|
-    draft.puts "---"
-    draft.puts "layout: post"
-    draft.puts "title: \"#{title.gsub(/-/,' ')}\""
+    draft.puts '---'
+    draft.puts 'layout: post'
+    draft.puts "title: \"#{title.tr(/-/, ' ')}\""
     draft.puts 'description: ""'
     draft.puts "date: #{date}"
     draft.puts "tags: #{tags}"
-    draft.puts "comments: true"
-    draft.puts "share: true"
-    draft.puts "---"
+    draft.puts 'comments: true'
+    draft.puts '---'
   end
 end # task :draft
 
