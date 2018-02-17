@@ -4,7 +4,6 @@ title: "A WoW Vanilla server with MaNGOS"
 description: "compile and install the World of Warcraft Vanilla server core on Linux"
 date: 2016-10-08
 comments: true
-share: false
 ---
 
 I used to play to World of Warcraft several years ago and I quit a few weeks before the release of The Burning Crusade. I came back a few times, to try out the new expansions, but nothing really was the same anymore after the death of the official Vanilla.

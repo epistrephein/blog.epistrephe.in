@@ -32,15 +32,14 @@ task :post do
 
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts '---'
+    post.puts 'layout: post'
+    post.puts "title: \"#{title.tr(/-/, ' ')}\""
     post.puts 'description: ""'
     post.puts "date: #{date}"
     post.puts "tags: #{tags}"
-    post.puts "comments: true"
-    post.puts "share: true"
-    post.puts "---"
+    post.puts 'comments: true'
+    post.puts '---'
   end
 end # task :post
 

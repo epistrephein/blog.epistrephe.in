@@ -4,7 +4,6 @@ title: "Cloudflare dynamic DNS"
 description: "use Cloudflare as a dynamic DNS with a simple bash script"
 date: 2016-09-21
 comments: true
-share: false
 ---
 
 Let's say you're experimenting with a [Raspberry Pi](https://www.raspberrypi.org) or have an old computer and you want to host a website at home instead of buying a subscription to a VPS. You go ahead, craft your best CSS, link a cool domain name to your IP, forward the ports, start Apache or nginx or whatever and there you go: home-made web server, nice!
