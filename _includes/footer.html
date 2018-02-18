@@ -1,5 +1,15 @@
 <div class="footer">
+  <!-- Copyright years -->
+  {% assign first = site.posts.last.date | date: '%Y' %}
+  {% assign current = site.time | date: '%Y' %}
+
+  {% if first == current %}
+    {% assign copyright = current %}
+  {% else %}
+    {% assign copyright = first | append: '–' | append: current %}</p>
+  {% endif %}
+
   <hr>
-  <span class="copy-left">©</span> {{ site.time | date: '%Y' }} {{ site.author.name }}. No rights reserved.<br>
+  <span class="copy-left">©</span> {{ copyright }} {{ site.author.name }}. No rights reserved.<br>
   <small>Steal these posts. Share the knowledge. Power to the people.</small>
 </div>
