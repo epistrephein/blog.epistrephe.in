@@ -1,19 +1,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ site.description }}">
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
-
-  <!-- Font -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
   {% seo %}
 
   {% include google-analytics.html %}
-
 </head>
