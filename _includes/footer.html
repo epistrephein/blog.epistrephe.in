@@ -3,7 +3,7 @@
   {% assign first = site.posts.last.date | date: '%Y' %}
   {% assign current = site.time | date: '%Y' %}
 
-  {% if first == current %}
+  {% if first == current or first == nil %}
     {% assign copyright = current %}
   {% else %}
     {% assign copyright = first | append: '–' | append: current %}</p>
