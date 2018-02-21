@@ -5,7 +5,9 @@ layout: default
 
 <div class="list">
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
+  <div class="list-post">
+    <h2>No posts found</h2>
+  </div>
 {% else %}
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
