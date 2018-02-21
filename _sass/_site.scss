@@ -81,21 +81,21 @@ body {
 }
 
 .header-small {
-	text-align: left;
-	margin-bottom: .75rem;
-	font-size: .75rem;
-	font-weight: 600;
-	text-transform: uppercase;
+  text-align: left;
+  margin-bottom: .75rem;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 
-	a {
-		color: $base-color;
+  a {
+    color: $base-color;
     text-decoration: none;
 
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
-	}
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 /*--------------
@@ -135,7 +135,7 @@ body {
       color: #fff;
       background-color: $base-lighten-color;
       text-decoration: none;
-			border-radius: 3px;
+      border-radius: 3px;
     }
     li {
       font-size: .75rem;
@@ -145,7 +145,7 @@ body {
     }
     span {
       float: left;
-			padding: .5px 5px;
+      padding: .5px 5px;
     }
   }
   &-share {
@@ -190,7 +190,7 @@ body {
     }
 
     &-desc {
-			color: lighten($base-color, 20);
+      color: lighten($base-color, 20);
       margin-bottom: .25rem;
       font-size: .85rem;
       line-height: 1.2rem;
@@ -250,14 +250,14 @@ body {
       margin: 1px 4px;
       color: #fff;
       background-color: lighten($base-color,50);
-			border-radius: 3px;
+      border-radius: 3px;
       span {
         float: left;
         padding: .5px 5px;
       }
       .count {
         background-color: lighten($base-color,40);
-				border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
       }
       &:hover {
         background-color: lighten($base-color,40);
@@ -266,24 +266,24 @@ body {
   }
 
   &-title {
-		font-size: 1.4rem;
-		font-weight: 600;
-		text-transform: lowercase;
-		padding-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    padding-top: 1rem;
   }
 
   &-post {
-		padding-left: .75rem;
-		a {
-			color: $base-color;
+    padding-left: .75rem;
+    a {
+      color: $base-color;
       text-decoration: none;
 
-			&:hover {
-				color: $base-color;
-				text-decoration: none;
-		    border-color: transparent;
+      &:hover {
+        color: $base-color;
+        text-decoration: none;
+        border-color: transparent;
       }
-		}
+    }
   }
 }
 
@@ -299,9 +299,9 @@ body {
         text-decoration: none;
 
         &:hover {
-  				color: $base-color;
-  				text-decoration: none;
-  		    border-color: transparent;
+          color: $base-color;
+          text-decoration: none;
+          border-color: transparent;
         }
 
       }
